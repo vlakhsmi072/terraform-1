@@ -13,7 +13,7 @@ pipeline{
         }
         stage('Terraform Plan'){
             steps{
-                sh 'terraform plan'
+                sh 'terraform plan -input=false'
             }
         }
          stage('Terraform Apply'){
